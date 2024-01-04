@@ -1,0 +1,179 @@
+:root {
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*elementos base*/
+body {
+background: var(--preta);
+font-family: Arial, Times, serif;
+color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;   /*align itens quando o flex-direction está row, ele está de uma maneira vertical*/
+    justify-content: space-between;  /*está de maneira horizontal */
+
+}
+
+header .logo{
+    margin-left: 5px;
+    color:  var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+/* para passar o mouse em cima e alterar a cor */
+header nav a:hover{
+    color: #fff;
+}
+ /*filme principal */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+    height: 400px;
+    background-size:cover;   /*imagem irá ficar do tamanho da caixa */
+    display: flex;
+    flex-direction: column;  /*vem como padrão para linha (row)*/
+    justify-content: center;
+    align-items: flex-start;   /*elementos comecem de maneira a esquerda*/
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px ;
+    margin-top: 10px;
+}
+
+.titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS',  Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;   /*eles já vem com borda padrao, por isso utilizar isto */
+    color: white;  /*para poder enchergar as letras*/
+
+    padding: 15px 30px;    /*espaço interno  valores pra cima e pra baixo*/ 
+   margin-right: 15px;
+   font-size:12px ;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+footer{
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #1c1c1c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#informacoesModal {
+    display: none;
+}
+
+#informacoesModal .modal-content {
+    position: relative;
+    background-color: #1c1c1c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+}
+
+#informacoesModal h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#informacoesModal p {
+    font-size: 16px;
+}
+
+#informacoesModal .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
